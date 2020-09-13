@@ -83,12 +83,12 @@ class HomeActivity: BaseActivity() {
 
     private fun makeRequest(){
         val md5Hash = getMd5Hash(1.toString()
-                + "264c9e6bbc0f69edbfec5b977718f2746ec895a2"
-                + "0123bf899073832d517448eacbd1773f")
+                + resources.getString(R.string.private_apikey)
+                + resources.getString(R.string.public_apikey))
         md5Hash?.let {
             viewModel.getCharacters(
                 1,
-                "0123bf899073832d517448eacbd1773f",
+                resources.getString(R.string.public_apikey),
                 md5Hash
             )
         }

@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class MarvelAdapter {
 
-    private val baseUrl = "https://developer.marvel.com/"
+    private val baseUrl = "https://gateway.marvel.com/"
     private var marvelService: MarvelService? = null
 
     fun getMarvelService(): MarvelService? {

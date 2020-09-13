@@ -11,6 +11,7 @@ import android.view.ViewAnimationUtils
 import android.view.WindowManager
 import android.view.animation.AccelerateInterpolator
 import com.grability.marvelcharacters.R
+import com.grability.marvelcharacters.views.login.LoginActivity
 import kotlinx.android.synthetic.main.activity_splash.*
 
 class SplashActivity : AppCompatActivity() {
@@ -53,7 +54,7 @@ class SplashActivity : AppCompatActivity() {
 
         val mHandler1 = Handler()
         mHandler1.postDelayed({
-            //goToActivity(Login::class.java)
+            goToActivity(LoginActivity::class.java)
             finish()
         }, 1750)
     }

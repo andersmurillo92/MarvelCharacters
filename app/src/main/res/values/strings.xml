@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">Marvel Characters</string>
+
+    <!-- LOGIN -->
+
+    <string name="slogan">All Marvel\'s characters in one place</string>
+    <string name="email">Correo electrónico</string>
+    <string name="password">Contraseña</string>
+    <string name="login">Log in</string>
+
+    <!-- MESSAGES TO USER -->
+
+    <string name="message_please_wait">Por favor, espera&#8230;</string>
+    <string name="message_title_login">Iniciando sesión</string>
+    <string name="message_not_connected">Al parecer que no tienes acceso a internet. Por favor, verifica tu conexión Wi-Fi o la disponibilidad de tu plan de datos</string>
+
+    <!-- ERROR MESSAGES -->
+
+    <string name="error_empty_field">Este campo no debe estar vacío</string>
+    <string name="error_minimum_password_field">Debe contener mínimo 5 caracteres</string>
+    <string name="error_wrong_email">Ingrese un correo electrónico válido</string>
 </resources>

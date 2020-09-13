@@ -15,7 +15,7 @@ import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
 interface IMarvelInteractor {
-    fun getCharacters(ts: Long, apikey: String, hash: String): Observable<ResponseModel>?
+    fun getCharacters(ts: Long, apikey: String, hash: String, page: Int): Observable<ResponseModel>?
 }
 
 class MarvelInteractor: IMarvelInteractor {
@@ -29,8 +29,8 @@ class MarvelInteractor: IMarvelInteractor {
             .build().inject(this)
     }
 
-    override fun getCharacters(ts: Long, apikey: String, hash: String): Observable<ResponseModel>? {
-        return repository.getCharacters(ts, apikey, hash)
+    override fun getCharacters(ts: Long, apikey: String, hash: String, page: Int): Observable<ResponseModel>? {
+        return repository.getCharacters(ts, apikey, hash, page)
             ?.subscribeOn(Schedulers.io())
             ?.observeOn(AndroidSchedulers.mainThread())
             ?.flatMap {

@@ -17,6 +17,8 @@ class HomeViewModel: ViewModel() {
     @Inject
     lateinit var interactor: IMarvelInteractor
     var characterList: MutableLiveData<List<ResultsModel>> = MutableLiveData()
+    var limit: Int = 0
+    var total: Int = 0
 
     init {
         DaggerMarvelComponent.builder().build().inject(this)
@@ -30,9 +32,11 @@ class HomeViewModel: ViewModel() {
     var singleLiveEvent: SingleLiveEvent<ViewEvent> = SingleLiveEvent()
 
     @SuppressLint("CheckResult")
-    fun getCharacters(ts: Long, apikey: String, hash: String) {
-        interactor.getCharacters(ts, apikey, hash)?.subscribe({
+    fun getCharacters(ts: Long, apikey: String, hash: String, page: Int) {
+        interactor.getCharacters(ts, apikey, hash, page)?.subscribe({
             if(it.code == 200){
+                it.dataModel?.total?.let { it1 -> total = it1 }
+                it.dataModel?.limit?.let { it1 -> limit = it1 }
                 characterList.value = it.dataModel?.results
                 singleLiveEvent.value = ViewEvent.ResponseSuccess()
             } else {

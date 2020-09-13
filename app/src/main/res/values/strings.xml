@@ -12,7 +12,9 @@
 
     <string name="message_please_wait">Por favor, espera&#8230;</string>
     <string name="message_title_login">Iniciando sesión</string>
+    <string name="message_title_getting_characters">Obteniendo personajes</string>
     <string name="message_not_connected">Al parecer que no tienes acceso a internet. Por favor, verifica tu conexión Wi-Fi o la disponibilidad de tu plan de datos</string>
+    <string name="message_error_ocurred">Es posible que haya ocurrido un error de conexión. Por favor, vuelve a intentarlo</string>
 
     <!-- ERROR MESSAGES -->
 

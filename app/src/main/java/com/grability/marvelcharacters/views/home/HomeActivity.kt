@@ -14,6 +14,8 @@ import com.grability.marvelcharacters.data.model.ResultsModel
 import java.math.BigInteger
 import java.security.MessageDigest
 import java.security.NoSuchAlgorithmException
+import java.util.*
+import kotlin.collections.ArrayList
 
 
 class HomeActivity: BaseActivity() {
@@ -82,16 +84,21 @@ class HomeActivity: BaseActivity() {
     }
 
     private fun makeRequest(){
-        val md5Hash = getMd5Hash(1.toString()
-                + "264c9e6bbc0f69edbfec5b977718f2746ec895a2"
-                + "0123bf899073832d517448eacbd1773f")
+        val timeStamp = getTimeStamp()
+        val md5Hash = getMd5Hash(timeStamp.toString()
+                + resources.getString(R.string.private_apikey)
+                + resources.getString(R.string.public_apikey))
         md5Hash?.let {
             viewModel.getCharacters(
-                1,
-                "0123bf899073832d517448eacbd1773f",
+                timeStamp,
+                resources.getString(R.string.public_apikey),
                 md5Hash
             )
         }
+    }
+
+    private fun getTimeStamp(): Long {
+        return Calendar.getInstance().timeInMillis
     }
 
     private fun getMd5Hash(input: String?): String? {

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- API keys -->
+
+    <string name="public_apikey">0123bf899073832d517448eacbd1773f</string>
+    <string name="private_apikey">264c9e6bbc0f69edbfec5b977718f2746ec895a2</string>
+</resources>

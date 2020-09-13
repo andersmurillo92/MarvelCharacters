@@ -54,13 +54,10 @@
         <TextView
             android:id="@+id/subtitle_txt"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/padding8"
+            android:layout_height="0dp"
             android:maxLines="5"
             android:textColor="@color/gray"
-            android:textSize="@dimen/font12"
-            android:text="@string/app_name"
-            android:visibility="visible"/>
+            android:textSize="@dimen/font12"/>
 
     </LinearLayout>
 

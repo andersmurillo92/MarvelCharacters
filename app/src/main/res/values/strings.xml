@@ -4,21 +4,21 @@
     <!-- LOGIN -->
 
     <string name="slogan">All Marvel\'s characters in one place</string>
-    <string name="email">Correo electrónico</string>
-    <string name="password">Contraseña</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
     <string name="login">Log in</string>
 
     <!-- MESSAGES TO USER -->
 
-    <string name="message_please_wait">Por favor, espera&#8230;</string>
-    <string name="message_title_login">Iniciando sesión</string>
-    <string name="message_title_getting_characters">Obteniendo personajes</string>
-    <string name="message_not_connected">Al parecer que no tienes acceso a internet. Por favor, verifica tu conexión Wi-Fi o la disponibilidad de tu plan de datos</string>
-    <string name="message_error_ocurred">Es posible que haya ocurrido un error de conexión. Por favor, vuelve a intentarlo</string>
+    <string name="message_please_wait">Please, wait&#8230;</string>
+    <string name="message_title_login">Logging in</string>
+    <string name="message_title_getting_characters">Getting data</string>
+    <string name="message_not_connected">Maybe, you don\'t have network access. Please, check your Wifi connection or mobile network access</string>
+    <string name="message_error_ocurred">A connection error has occurred. Please, try again</string>
 
     <!-- ERROR MESSAGES -->
 
-    <string name="error_empty_field">Este campo no debe estar vacío</string>
-    <string name="error_minimum_password_field">Debe contener mínimo 5 caracteres</string>
-    <string name="error_wrong_email">Ingrese un correo electrónico válido</string>
+    <string name="error_empty_field">This field must not be empty</string>
+    <string name="error_minimum_password_field">It must have five characters at least</string>
+    <string name="error_wrong_email">Please, type a valid email</string>
 </resources>

@@ -30,8 +30,8 @@ class HomeViewModel: ViewModel() {
     var singleLiveEvent: SingleLiveEvent<ViewEvent> = SingleLiveEvent()
 
     @SuppressLint("CheckResult")
-    fun getCharacters(ts: Long, apikey: String, hash: String) {
-        interactor.getCharacters(ts, apikey, hash)?.subscribe({
+    fun getCharacters(ts: Long, apikey: String, hash: String, page: Int) {
+        interactor.getCharacters(ts, apikey, hash, page)?.subscribe({
             if(it.code == 200){
                 characterList.value = it.dataModel?.results
                 singleLiveEvent.value = ViewEvent.ResponseSuccess()

@@ -92,7 +92,8 @@ class HomeActivity: BaseActivity() {
             viewModel.getCharacters(
                 timeStamp,
                 resources.getString(R.string.public_apikey),
-                md5Hash
+                md5Hash,
+                currentOffset
             )
         }
     }

@@ -10,5 +10,6 @@ interface MarvelService {
     @GET("v1/public/characters")
     fun getCharacters(@Query("ts") ts: Long,
                       @Query("apikey") apikey: String,
-                      @Query("hash") hash: String): Observable<ResponseDTO>
+                      @Query("hash") hash: String,
+                      @Query("offset") offset: Int): Observable<ResponseDTO>
 }

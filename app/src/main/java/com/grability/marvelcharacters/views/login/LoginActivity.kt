@@ -66,6 +66,7 @@ class LoginActivity: BaseActivity() {
                 showProgressDialog(getString(R.string.message_title_login),getString(R.string.message_please_wait), indeterminate = false, cancelable = false)
                 val mHandler1 = Handler()
                 mHandler1.postDelayed({
+                    hideProgressDialog()
                     goToActivity(HomeActivity::class.java, arrayOf(Intent.FLAG_ACTIVITY_NEW_TASK, Intent.FLAG_ACTIVITY_CLEAR_TASK))
                     finish()
                 }, 1750)

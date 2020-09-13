@@ -2,10 +2,10 @@ package com.grability.marvelcharacters.views.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.view.setPadding
 import androidx.recyclerview.widget.RecyclerView
 import com.grability.marvelcharacters.R
 import com.grability.marvelcharacters.data.model.ResultsModel
@@ -33,10 +33,19 @@ class CharacterViewHolder(inflater: LayoutInflater, parent: ViewGroup) : Recycle
 
         title?.text = results.name
 
-        if(results.description != null && !results.description.equals(""))
+        if(results.description != null && !results.description.equals("")){
             description?.text = results.description
-        else
-            description?.visibility = View.GONE
+
+            val params = description?.layoutParams
+            params?.height = ViewGroup.LayoutParams.WRAP_CONTENT
+            description?.layoutParams = params
+
+            val density = context?.resources?.displayMetrics?.density
+            density?.let {
+                val paddingPixel = (8 * density).toInt()
+                description?.setPadding(paddingPixel)
+            }
+        }
 
         itemView.setOnClickListener {
 

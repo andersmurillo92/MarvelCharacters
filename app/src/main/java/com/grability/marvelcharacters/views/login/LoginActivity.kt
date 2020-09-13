@@ -3,12 +3,14 @@ package com.grability.marvelcharacters.views.login
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Patterns
 import com.google.android.material.textfield.TextInputLayout
 import com.grability.marvelcharacters.R
 import com.grability.marvelcharacters.views.base.BaseActivity
+import com.grability.marvelcharacters.views.home.HomeActivity
 import kotlinx.android.synthetic.main.activity_login.*
 import java.util.regex.Pattern
 
@@ -62,6 +64,11 @@ class LoginActivity: BaseActivity() {
             hideKeyboard(this)
             if (hasNetworkConnection()) {
                 showProgressDialog(getString(R.string.message_title_login),getString(R.string.message_please_wait), indeterminate = false, cancelable = false)
+                val mHandler1 = Handler()
+                mHandler1.postDelayed({
+                    goToActivity(HomeActivity::class.java, arrayOf(Intent.FLAG_ACTIVITY_NEW_TASK, Intent.FLAG_ACTIVITY_CLEAR_TASK))
+                    finish()
+                }, 1750)
             } else {
                 showSimpleToast(resources.getString(R.string.message_not_connected))
             }

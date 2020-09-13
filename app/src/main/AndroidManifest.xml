@@ -30,6 +30,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.grability.marvelcharacters.views.splash.SplashActivity" />
         </activity>
+
+        <activity android:name=".views.home.HomeActivity"
+            android:label="@string/app_name"
+            android:parentActivityName=".views.login.LoginActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.grability.marvelcharacters.views.login.LoginActivity" />
+        </activity>
     </application>
 
 </manifest>
